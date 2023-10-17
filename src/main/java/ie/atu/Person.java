@@ -1,21 +1,31 @@
 package ie.atu;
 
-public class Person {
-    String firstName = "";
-    String lastName = "";
-    int age = 0;
+import java.util.Scanner;
 
-    //default constructor to init default values
-    public Person(){
-        this.firstName = "Joshua";
-        this.lastName = "Battle";
-        this.age = 20;
-    }
+public class Person {
+    String firstName;
+    String lastName;
+    int age;
+
     //constructor
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+    }
+
+    //getting user input
+    public void getUserInput() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter first name: ");
+        this.firstName = scanner.nextLine();
+
+        System.out.print("Enter last name: ");
+        this.lastName = scanner.nextLine();
+
+        System.out.print("Enter age: ");
+        this.age = scanner.nextInt();
     }
 
     public void displayInfo() {
