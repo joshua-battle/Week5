@@ -7,6 +7,12 @@ public class Person {
     String lastName;
     int age;
 
+    //default constructor to init default values
+    public Person(){
+        this.firstName = "Joshua";
+        this.lastName = "Battle";
+        this.age = 20;
+    }
     //constructor
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
